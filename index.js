@@ -3,7 +3,6 @@ const morgan = require("morgan");
 const { createProxyMiddleware } = require("http-proxy-middleware");
 
 const PORT = process.env.PORT;
-const HOST = process.env.HOST;
 
 const BANANO_API = "https://api-beta.banano.cc/";
 
@@ -19,6 +18,6 @@ app.use(
   })
 );
 
-app.listen(PORT, HOST, () => {
+app.listen(PORT, () => {
   console.log(`Starting Proxy at ${HOST}:${PORT}`);
 });
