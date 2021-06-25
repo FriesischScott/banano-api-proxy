@@ -17,6 +17,9 @@ app.use(
   createProxyMiddleware({
     target: BANANO_API,
     changeOrigin: true,
+    pathRewrite: {
+      "^/banano": "/",
+    },
   })
 );
 
