@@ -1,0 +1,14 @@
+{
+  "name": "banano-api-proxy",
+  "version": "1.0.0",
+  "description": "Simple proxy to the banano API to work around CORS issues",
+  "main": "index.js",
+  "repository": "git@github.com:friesischscott/banano-api-proxy",
+  "author": "FriesischScott",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1",
+    "http-proxy-middleware": "^2.0.0",
+    "morgan": "^1.10.0"
+  }
+}
