@@ -5,7 +5,7 @@ const { createProxyMiddleware } = require("http-proxy-middleware");
 
 const PORT = process.env.PORT;
 
-const BANANO_API = "https://api-beta.banano.cc/";
+const BANANO_API = process.env.BANANO_API_URL || "https://api-beta.banano.cc/";
 
 const app = express();
 
