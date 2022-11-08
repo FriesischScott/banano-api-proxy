@@ -9,8 +9,13 @@ const BANANO_API = process.env.BANANO_API_URL || "https://api-beta.banano.cc/";
 
 const app = express();
 
+const corsOptions = {
+  origin: "https://banano-export.vercel.app/",
+  optionsSuccessStatus: 200, // some legacy browsers (IE11, various SmartTVs) choke on 204
+};
+
 app.use(morgan("dev"));
-app.use(cors());
+app.use(cors(corsOptions));
 
 app.use(
   "/banano",
